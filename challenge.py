@@ -1,6 +1,6 @@
-# Desafio - Refatorar o projeto da aula anterior evitando Bugs!
+""" Desafio - Refatorar o projeto da aula anterior evitando Bugs!"""
 
-# 1) Solicita ao usuário que digite seu nome
+""" 1) Solicita ao usuário que digite seu nome"""
 
 try:
     name = str(input('Type your name: '))
@@ -17,7 +17,8 @@ except ValueError as e:
     print(e)
     exit()
 
-# 2) Solicita ao usuário que digite o valor do seu salário e converte para float
+""" 2) Solicita ao usuário que digite o valor do seu salário
+ e converte para float"""
 
 try:
     salary = float(input('Type your salary: '))
@@ -30,7 +31,8 @@ except ValueError as e:
     exit()
 
 
-# 3) Solicita ao usuário que digite o valor do bônus recebido e converte para float
+""" 3) Solicita ao usuário que digite o valor do bônus
+recebido e converte para float"""
 
 try:
     bonus = float(input('Type the bonus received: '))
