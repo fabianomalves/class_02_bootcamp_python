@@ -38,30 +38,30 @@
 # print(f'The product of {number_1} and {number_2} is {number_product}')
 
 
-"""
-4. Faça um programa que peça dois números inteiros e
-imprima a divisão inteira do primeiro pelo segundo.
-"""
-
-number_1 = int(input('Type the integer number 1 to be divided: '))
-number_2 = int(input('Type the integer number 2 to be divided: '))
-
-integer_division = number_1 // number_2
-
-print(f'The integer division by {number_1} and'
-      f'{number_2} is {integer_division}')
-
-
 # """
-# 5. Escreva um programa que calcule
-# o quadrado de um número fornecido pelo usuário.
+# 4. Faça um programa que peça dois números inteiros e
+# imprima a divisão inteira do primeiro pelo segundo.
 # """
 
-# number = int(input('Type a number: '))
+# number_1 = int(input('Type the integer number 1 to be divided: '))
+# number_2 = int(input('Type the integer number 2 to be divided: '))
 
-# power_number = number**2
+# integer_division = number_1 // number_2
 
-# print(f'The power of {number} ins {power_number}.')
+# print(f'The integer division by {number_1} and'
+#       f'{number_2} is {integer_division}')
+
+
+"""
+5. Escreva um programa que calcule
+o quadrado de um número fornecido pelo usuário.
+"""
+
+number = int(input('Type a number: '))
+
+power_number = number**2
+
+print(f'The power of {number} ins {power_number}.')
 
 
 # #### Números de Ponto Flutuante (`float`)
