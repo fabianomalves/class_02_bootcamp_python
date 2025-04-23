@@ -67,23 +67,32 @@
 # #### Números de Ponto Flutuante (`float`)
 
 
-"""
-6. Escreva um programa que receba
-dois números flutuantes e realize sua adição.
-"""
+# """
+# 6. Escreva um programa que receba
+# dois números flutuantes e realize sua adição.
+# """
 
-number_1 = float(input("Type a float number: "))
-number_2 = float(input("Type other float number: "))
+# number_1 = float(input("Type a float number: "))
+# number_2 = float(input("Type other float number: "))
 
-sum_float_numbers = number_1 + number_2
+# sum_float_numbers = number_1 + number_2
 
-print(f"The sum of {number_1} and {number_2} is {sum_float_numbers}.")
+# print(f"The sum of {number_1} and {number_2} is {sum_float_numbers}.")
 
 
 """
 7. Crie um programa que calcule a média de
 dois números flutuantes fornecidos pelo usuário.
 """
+
+number_1 = float(input("Type the first float number: "))
+number_2 = float(input("Type the second float number: "))
+
+average_numbers = (number_1 + number_2) / 2
+
+print(f"The average number between "
+      f"{number_1} and {number_2} is {average_numbers}.")
+
 
 """
 8. Desenvolva um programa que calcule a potência de
