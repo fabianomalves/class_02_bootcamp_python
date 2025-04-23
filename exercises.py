@@ -1,3 +1,6 @@
+import math  # importe math lib to exercise 10
+
+
 # # #### Inteiros (`int`)
 
 # """
@@ -109,25 +112,39 @@
 #       f"{number_base} and {number_exponent} is {power_number}.")
 
 
-"""
-9. Faça um programa que converta a temperatura
-de Celsius para Fahrenheit.
-"""
-# Temperature in degrees Fahrenheit (°F) = (Temperature in degrees Celsius (°C) * 9/5) + 32
+# """
+# 9. Faça um programa que converta a temperatura
+# de Celsius para Fahrenheit.
+# Temperature in degrees Fahrenheit
+# (°F) = (Temperature in degrees Celsius (°C) * 9/5) + 32
+# """
 
-celsius_degree = float(input("Type a temperature in Celsius: "))
+# celsius_degree = float(input("Type a temperature in Celsius: "))
 
-fahrenheint_degree = ((celsius_degree * 9/5) + 32)
+# fahrenheint_degree = ((celsius_degree * 9/5) + 32)
 
-print(f"The celsius temperature in celsius {celsius_degree} "
-      f"is equivalent to {fahrenheint_degree} Fahrenheit.")
+# print(f"The celsius temperature in celsius {celsius_degree} "
+#       f"is equivalent to {fahrenheint_degree} Fahrenheit.")
 
 
 """
 10. Escreva um programa que calcule a área
 de um círculo, recebendo o raio como entrada.
+The area of a circle is calculated using the formula A = πr²,
+where A represents the area, π (pi) is a mathematical constant
+approximately equal to 3.14159, and r is the radius of the circle.
+Identify the radius (r): The radius is the distance from
+the center of the circle to any point on its edge.
+Square the radius (r²): Multiply the radius by itself (r * r).
+Multiply by π (pi): Multiply the squared radius (r²) by the
+mathematical constant π (approximately 3.14159).
 """
 
+radius = float(input("Type the radius from a circle: "))
+
+circle_area = math.pi * (radius ** 2)
+
+print(f"The area from a circle with radius {radius} is {circle_area:.02f}.")
 
 # #### Strings (`str`)
 
