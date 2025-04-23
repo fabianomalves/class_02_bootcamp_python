@@ -52,32 +52,32 @@
 #       f'{number_2} is {integer_division}')
 
 
-"""
-5. Escreva um programa que calcule
-o quadrado de um número fornecido pelo usuário.
-"""
+# """
+# 5. Escreva um programa que calcule
+# o quadrado de um número fornecido pelo usuário.
+# """
 
-number = int(input('Type a number: '))
+# number = int(input('Type a number: '))
 
-power_number = number**2
+# power_number = number**2
 
-print(f'The power of {number} ins {power_number}.')
+# print(f'The power of {number} ins {power_number}.')
 
 
 # #### Números de Ponto Flutuante (`float`)
 
 
-# """
-# 6. Escreva um programa que receba
-# dois números flutuantes e realize sua adição.
-# """
+"""
+6. Escreva um programa que receba
+dois números flutuantes e realize sua adição.
+"""
 
-# number_1 = float(input("Type a float number: "))
-# number_2 = float(input("Type other float number: "))
+number_1 = float(input("Type a float number: "))
+number_2 = float(input("Type other float number: "))
 
-# sum_float_numbers = number_1 + number_2
+sum_float_numbers = number_1 + number_2
 
-# print(f"The sum of {number_1} and {number_2} is {sum_float_numbers}.")
+print(f"The sum of {number_1} and {number_2} is {sum_float_numbers}.")
 
 
 """
