@@ -25,31 +25,31 @@
 
 # print(f'The division rest from {number} is {division_rest_number}.')
 
-"""
-3. Desenvolva um programa que multiplique
-dois números fornecidos pelo usuário e mostre o resultado.
-"""
-
-number_1 = int(input('Type the first integer number: '))
-number_2 = int(input('Type the second integer number: '))
-
-number_product = number_1 * number_2
-
-print(f'The product of {number_1} and {number_2} is {number_product}')
-
-
 # """
-# 4. Faça um programa que peça dois números inteiros e
-# imprima a divisão inteira do primeiro pelo segundo.
+# 3. Desenvolva um programa que multiplique
+# dois números fornecidos pelo usuário e mostre o resultado.
 # """
 
-# number_1 = int(input('Type the integer number 1 to be divided: '))
-# number_2 = int(input('Type the integer number 2 to be divided: '))
+# number_1 = int(input('Type the first integer number: '))
+# number_2 = int(input('Type the second integer number: '))
 
-# integer_division = number_1 // number_2
+# number_product = number_1 * number_2
 
-# print(f'The integer division by {number_1} and'
-#       f'{number_2} is {integer_division}')
+# print(f'The product of {number_1} and {number_2} is {number_product}')
+
+
+"""
+4. Faça um programa que peça dois números inteiros e
+imprima a divisão inteira do primeiro pelo segundo.
+"""
+
+number_1 = int(input('Type the integer number 1 to be divided: '))
+number_2 = int(input('Type the integer number 2 to be divided: '))
+
+integer_division = number_1 // number_2
+
+print(f'The integer division by {number_1} and'
+      f'{number_2} is {integer_division}')
 
 
 # """
