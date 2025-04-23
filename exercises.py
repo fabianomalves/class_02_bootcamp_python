@@ -94,25 +94,34 @@
 #       f"{number_1} and {number_2} is {average_numbers}.")
 
 
-"""
-8. Desenvolva um programa que calcule a potência de
-um número (base e expoente fornecidos pelo usuário).
-"""
+# """
+# 8. Desenvolva um programa que calcule a potência de
+# um número (base e expoente fornecidos pelo usuário).
+# """
 
 
-number_base = float(input("Type the base number: "))
-number_exponent = float(input("Type the exponent number: "))
+# number_base = float(input("Type the base number: "))
+# number_exponent = float(input("Type the exponent number: "))
 
-power_number = number_base**number_exponent
+# power_number = number_base**number_exponent
 
-print(f"The power between "
-      f"{number_base} and {number_exponent} is {power_number}.")
+# print(f"The power between "
+#       f"{number_base} and {number_exponent} is {power_number}.")
 
 
 """
 9. Faça um programa que converta a temperatura
 de Celsius para Fahrenheit.
 """
+# Temperature in degrees Fahrenheit (°F) = (Temperature in degrees Celsius (°C) * 9/5) + 32
+
+celsius_degree = float(input("Type a temperature in Celsius: "))
+
+fahrenheint_degree = ((celsius_degree * 9/5) + 32)
+
+print(f"The celsius temperature in celsius {celsius_degree} "
+      f"is equivalent to {fahrenheint_degree} Fahrenheit.")
+
 
 """
 10. Escreva um programa que calcule a área
@@ -158,19 +167,23 @@ resultado da operação AND entre elas.
 """
 
 """
-17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
+17. Crie um programa que receba dois valores booleanos do usuário e retorne o
+resultado da operação OR.
 """
 
 """
-18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+18. Desenvolva um programa que peça ao usuário para inserir um valor booleano
+e, em seguida, inverta esse valor.
 """
 
 """
-19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+19. Faça um programa que compare se dois números fornecidos
+pelo usuário são iguais.
 """
 
 """
-20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
+20. Escreva um programa que verifique se dois números
+ fornecidos pelo usuário são diferentes.
 """
 
 # #### try-except e if
@@ -180,7 +193,7 @@ resultado da operação AND entre elas.
 """
 
 """
-22: Verificador de Palíndromo
+22: Verificador de Palíndromou
 """
 
 """
