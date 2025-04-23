@@ -14,28 +14,28 @@
 # print(f'The sum of {number_1} and {number_2} is {nummber_sum}.')
 
 
-"""
- 2. Crie um programa que receba um número do usuário
- e calcule o resto da divisão desse número por 5.
-"""
-
-number = int(input('Type an integer number: '))
-
-division_rest_number = number % 5
-
-print(f'The division rest from {number} is {division_rest_number}.')
-
 # """
-# 3. Desenvolva um programa que multiplique
-# dois números fornecidos pelo usuário e mostre o resultado.
+#  2. Crie um programa que receba um número do usuário
+#  e calcule o resto da divisão desse número por 5.
 # """
 
-# number_1 = int(input('Type the first integer number: '))
-# number_2 = int(input('Type the second integer number: '))
+# number = int(input('Type an integer number: '))
 
-# number_product = number_1 * number_2
+# division_rest_number = number % 5
 
-# print(f'The product of {number_1} and {number_2} is {number_product}')
+# print(f'The division rest from {number} is {division_rest_number}.')
+
+"""
+3. Desenvolva um programa que multiplique
+dois números fornecidos pelo usuário e mostre o resultado.
+"""
+
+number_1 = int(input('Type the first integer number: '))
+number_2 = int(input('Type the second integer number: '))
+
+number_product = number_1 * number_2
+
+print(f'The product of {number_1} and {number_2} is {number_product}')
 
 
 # """
