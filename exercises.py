@@ -80,24 +80,34 @@
 # print(f"The sum of {number_1} and {number_2} is {sum_float_numbers}.")
 
 
-"""
-7. Crie um programa que calcule a média de
-dois números flutuantes fornecidos pelo usuário.
-"""
+# """
+# 7. Crie um programa que calcule a média de
+# dois números flutuantes fornecidos pelo usuário.
+# """
 
-number_1 = float(input("Type the first float number: "))
-number_2 = float(input("Type the second float number: "))
+# number_1 = float(input("Type the first float number: "))
+# number_2 = float(input("Type the second float number: "))
 
-average_numbers = (number_1 + number_2) / 2
+# average_numbers = (number_1 + number_2) / 2
 
-print(f"The average number between "
-      f"{number_1} and {number_2} is {average_numbers}.")
+# print(f"The average number between "
+#       f"{number_1} and {number_2} is {average_numbers}.")
 
 
 """
 8. Desenvolva um programa que calcule a potência de
 um número (base e expoente fornecidos pelo usuário).
 """
+
+
+number_base = float(input("Type the base number: "))
+number_exponent = float(input("Type the exponent number: "))
+
+power_number = number_base**number_exponent
+
+print(f"The power between "
+      f"{number_base} and {number_exponent} is {power_number}.")
+
 
 """
 9. Faça um programa que converta a temperatura
