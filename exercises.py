@@ -140,9 +140,12 @@ Multiply by π (pi): Multiply the squared radius (r²) by the
 mathematical constant π (approximately 3.14159).
 """
 
+PI_CONSTANT = math.pi
+
+
 radius = float(input("Type the radius from a circle: "))
 
-circle_area = math.pi * (radius ** 2)
+circle_area = PI_CONSTANT * (radius ** 2)
 
 print(f"The area from a circle with radius {radius} is {circle_area:.02f}.")
 
