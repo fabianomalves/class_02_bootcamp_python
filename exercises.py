@@ -189,26 +189,33 @@ import math  # importe math lib to exercise 10
 # print(f"The phrase {phrase} without spaces is {phrase_without_space}.")
 
 
-"""
-14. Faça um programa que peça ao usuário para digitar
-uma data no formato "dd/mm/aaaa" e, em seguida,
-imprima o dia, o mês e o ano separadamente.
-"""
+# """
+# 14. Faça um programa que peça ao usuário para digitar
+# uma data no formato "dd/mm/aaaa" e, em seguida,
+# imprima o dia, o mês e o ano separadamente.
+# """
 
-date = str(input("Type a date in the format dd/mm/yyyy: "))
+# date = str(input("Type a date in the format dd/mm/yyyy: "))
 
-day = date[0:2]
-month = date[3:5]
-year = date[6:10]
+# day = date[0:2]
+# month = date[3:5]
+# year = date[6:10]
 
-print(f"From your date {date}, the day is {day}, "
-      f"the month is {month} and the year is {year}.")
+# print(f"From your date {date}, the day is {day}, "
+#       f"the month is {month} and the year is {year}.")
 
 
 """
 15. Escreva um programa que concatene
 duas strings fornecidas pelo usuário.
 """
+
+string_1 = str(input("type a string: "))
+string_2 = str(input("Type other string: "))
+
+concatenated_string = string_1 + string_2
+
+print(f"The string concatenated is {concatenated_string}.")
 
 # #### Booleanos (`bool`)
 
