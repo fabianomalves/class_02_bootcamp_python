@@ -151,21 +151,29 @@ import math  # importe math lib to exercise 10
 
 # #### Strings (`str`)
 
-"""
-11. Escreva um programa que receba uma
-string do usuário e a converta para maiúsculas.
-"""
+# """
+# 11. Escreva um programa que receba uma
+# string do usuário e a converta para maiúsculas.
+# """
 
-string_input = str(input("Type a string: "))
+# string_input = str(input("Type a string: "))
 
-string_upper = string_input.upper()
+# string_upper = string_input.upper()
 
-print(f"The string {string_input} in upper case is {string_upper}.")
+# print(f"The string {string_input} in upper case is {string_upper}.")
 
 """
 12. Crie um programa que receba o nome completo
 do usuário e imprima o nome com todas as letras minúsculas.
 """
+
+complete_name = str(input("Type your complete name: "))
+
+complet_name_lower = complete_name.lower()
+
+print(f"Your complete name {complete_name} "
+      f"in lower case is {complet_name_lower}.")
+
 
 """
 13. Desenvolva um programa que peça ao usuário para inserir
