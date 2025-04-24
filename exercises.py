@@ -175,18 +175,18 @@ import math  # importe math lib to exercise 10
 #       f"in lower case is {complet_name_lower}.")
 
 
-"""
-13. Desenvolva um programa que peça ao usuário para inserir
-uma frase e, em seguida, imprima esta frase
-sem espaços em branco no início e no final.
-"""
+# """
+# 13. Desenvolva um programa que peça ao usuário para inserir
+# uma frase e, em seguida, imprima esta frase
+# sem espaços em branco no início e no final.
+# """
 
-phrase = str(input("Type a phrase: "))
+# phrase = str(input("Type a phrase: "))
 
-phrase_without_space = phrase.strip()
+# phrase_without_space = phrase.strip()
 
 
-print(f"The phrase {phrase} without spaces is {phrase_without_space}.")
+# print(f"The phrase {phrase} without spaces is {phrase_without_space}.")
 
 
 """
@@ -194,6 +194,16 @@ print(f"The phrase {phrase} without spaces is {phrase_without_space}.")
 uma data no formato "dd/mm/aaaa" e, em seguida,
 imprima o dia, o mês e o ano separadamente.
 """
+
+date = str(input("Type a date in the format dd/mm/yyyy: "))
+
+day = date[0:2]
+month = date[3:5]
+year = date[6:10]
+
+print(f"From your date {date}, the day is {day}, "
+      f"the month is {month} and the year is {year}.")
+
 
 """
 15. Escreva um programa que concatene
