@@ -162,29 +162,37 @@ import math  # importe math lib to exercise 10
 
 # print(f"The string {string_input} in upper case is {string_upper}.")
 
-"""
-12. Crie um programa que receba o nome completo
-do usuário e imprima o nome com todas as letras minúsculas.
-"""
+# """
+# 12. Crie um programa que receba o nome completo
+# do usuário e imprima o nome com todas as letras minúsculas.
+# """
 
-complete_name = str(input("Type your complete name: "))
+# complete_name = str(input("Type your complete name: "))
 
-complet_name_lower = complete_name.lower()
+# complet_name_lower = complete_name.lower()
 
-print(f"Your complete name {complete_name} "
-      f"in lower case is {complet_name_lower}.")
+# print(f"Your complete name {complete_name} "
+#       f"in lower case is {complet_name_lower}.")
 
 
 """
 13. Desenvolva um programa que peça ao usuário para inserir
-uma frase e, em seguida, imprima esta frase s
-em espaços em branco no início e no final.
+uma frase e, em seguida, imprima esta frase
+sem espaços em branco no início e no final.
 """
+
+phrase = str(input("Type a phrase: "))
+
+phrase_without_space = phrase.strip()
+
+
+print(f"The phrase {phrase} without spaces is {phrase_without_space}.")
+
 
 """
 14. Faça um programa que peça ao usuário para digitar
-uma data no formato "dd/mm/aaaa" e, em seguida, i
-mprima o dia, o mês e o ano separadamente.
+uma data no formato "dd/mm/aaaa" e, em seguida,
+imprima o dia, o mês e o ano separadamente.
 """
 
 """
