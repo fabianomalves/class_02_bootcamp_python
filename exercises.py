@@ -222,25 +222,25 @@ import operator  # import operator lib to exercise 16
 
 # # #### Booleanos (`bool`)
 
-"""
-16. Escreva um programa que avalie duas expressões booleanas
-inseridas pelo usuário e retorne o
-resultado da operação AND entre elas.
-"""
+# """
+# 16. Escreva um programa que avalie duas expressões booleanas
+# inseridas pelo usuário e retorne o
+# resultado da operação AND entre elas.
+# """
 
-"""
-With this simple code,
-with two booleans variables,
-we can evaluate the AND operation.
-This without user's input.
-"""
+# """
+# With this simple code,
+# with two booleans variables,
+# we can evaluate the AND operation.
+# This without user's input.
+# """
 
-boolean_1 = True
-boolean_2 = True
+# boolean_1 = True
+# boolean_2 = True
 
-result_boolean = boolean_1 and boolean_2
+# result_boolean = boolean_1 and boolean_2
 
-print(f"The result between {boolean_1} AND {boolean_2} is {result_boolean}.")
+# print(f"The result between {boolean_1} AND {boolean_2} is {result_boolean}.")
 
 # """It's possible to use eval() to evaluate boolean expressions,
 # but be careful with the input, as it can lead to security
@@ -328,6 +328,14 @@ print(f"The result between {boolean_1} AND {boolean_2} is {result_boolean}.")
 17. Crie um programa que receba dois valores booleanos do usuário e retorne o
 resultado da operação OR.
 """
+
+boolean_1 = False
+boolean_2 = True
+
+result_boolean = boolean_1 or boolean_2
+
+print(f"The result between {boolean_1} OR {boolean_2} is {result_boolean}.")
+
 
 """
 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano
