@@ -228,10 +228,24 @@ inseridas pelo usuário e retorne o
 resultado da operação AND entre elas.
 """
 
-"""It's possible to use eval() to evaluate boolean expressions,
-but be careful with the input, as it can lead to security
-issues if not properly sanitized.
 """
+With this simple code,
+with two booleans variables,
+we can evaluate the AND operation.
+This without user's input.
+"""
+
+boolean_1 = True
+boolean_2 = True
+
+result_boolean = boolean_1 and boolean_2
+
+print(f"The result between {boolean_1} AND {boolean_2} is {result_boolean}.")
+
+# """It's possible to use eval() to evaluate boolean expressions,
+# but be careful with the input, as it can lead to security
+# issues if not properly sanitized.
+# """
 
 # boolean_1 = input("Type a boolean: ")
 # boolean_2 = input("Type other boolean: ")
@@ -246,68 +260,68 @@ issues if not properly sanitized.
 # except Exception as e:
 #     print(f"And error occurred: {e}")
 
-"""
-Or try this safe_eval(expr) function, to evaluate boolean
-expressions with secure input:
-"""
+# """
+# Or try this safe_eval(expr) function, to evaluate boolean
+# expressions with secure input:
+# """
 
 
-def safe_eval(expr):
-    ops = {
-        ast.Eq: operator.eq,
-        ast.NotEq: operator.ne,
-        ast.Gt: operator.gt,
-        ast.Lt: operator.lt,
-        ast.GtE: operator.ge,
-        ast.LtE: operator.le,
-    }
+# def safe_eval(expr):
+#     ops = {
+#         ast.Eq: operator.eq,
+#         ast.NotEq: operator.ne,
+#         ast.Gt: operator.gt,
+#         ast.Lt: operator.lt,
+#         ast.GtE: operator.ge,
+#         ast.LtE: operator.le,
+#     }
 
-    node = ast.parse(expr, mode="eval")
+#     node = ast.parse(expr, mode="eval")
 
-    def _eval(node):
-        if isinstance(node, ast.Expression):
-            return _eval(node.body)
-        if isinstance(node, ast.Compare):
-            left = _eval(node.left)
-            right = _eval(node.comparators[0])
-            op = type(node.ops[0])
-            if op in ops:
-                return ops[op](left, right)
-            else:
-                raise ValueError("Operator not allowed")
-        if isinstance(node, ast.Constant):
-            return node.value
-        raise ValueError("Expression not allowed")
+#     def _eval(node):
+#         if isinstance(node, ast.Expression):
+#             return _eval(node.body)
+#         if isinstance(node, ast.Compare):
+#             left = _eval(node.left)
+#             right = _eval(node.comparators[0])
+#             op = type(node.ops[0])
+#             if op in ops:
+#                 return ops[op](left, right)
+#             else:
+#                 raise ValueError("Operator not allowed")
+#         if isinstance(node, ast.Constant):
+#             return node.value
+#         raise ValueError("Expression not allowed")
 
-    return _eval(node)
+#     return _eval(node)
 
 
-expression_1 = (
-    input("Type one boolean expression, (like 5 > 3 or true):")
-    .strip()
-    .lower()
-    .replace("true", "True")
-    .replace("false", "False")
-)
-expression_2 = (
-    input("Type other boolean expression, (like 5 == 5 or false):")
-    .strip()
-    .lower()
-    .replace("true", "True")
-    .replace("false", "False")
-)
+# expression_1 = (
+#     input("Type one boolean expression, (like 5 > 3 or true):")
+#     .strip()
+#     .lower()
+#     .replace("true", "True")
+#     .replace("false", "False")
+# )
+# expression_2 = (
+#     input("Type other boolean expression, (like 5 == 5 or false):")
+#     .strip()
+#     .lower()
+#     .replace("true", "True")
+#     .replace("false", "False")
+# )
 
-try:
-    result_1 = safe_eval(expression_1)
-    result_2 = safe_eval(expression_2)
-    final_result = result_1 and result_2
+# try:
+#     result_1 = safe_eval(expression_1)
+#     result_2 = safe_eval(expression_2)
+#     final_result = result_1 and result_2
 
-    print(
-        f"The bolean result between {result_1} "
-        f"AND {result_2} is {final_result}")
+#     print(
+#         f"The bolean result between {result_1} "
+#         f"AND {result_2} is {final_result}")
 
-except Exception as e:
-    print(f"An erro occured: {e}")
+# except Exception as e:
+#     print(f"An erro occured: {e}")
 
 
 """
