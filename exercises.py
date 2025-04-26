@@ -337,21 +337,28 @@ import operator  # import operator lib to exercise 16
 # print(f"The result between {boolean_1} OR {boolean_2} is {result_boolean}.")
 
 
-"""
-18. Desenvolva um programa que peça ao usuário para inserir um valor booleano
-e, em seguida, inverta esse valor.
-"""
+# """
+# 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano
+# e, em seguida, inverta esse valor.
+# """
 
-boolean_value = True
+# boolean_value = True
 
-boolean_inverted = not boolean_value
+# boolean_inverted = not boolean_value
 
-print(f"The boolean value {boolean_value} inverted is {boolean_inverted}.")
+# print(f"The boolean value {boolean_value} inverted is {boolean_inverted}.")
 
 """
 19. Faça um programa que compare se dois números fornecidos
 pelo usuário são iguais.
 """
+
+number_1 = 2
+number_2 = 5
+
+equal_values = number_1 == number_2
+
+print(f"The numbers {number_1} and {number_2} are equals: {equal_values}.")
 
 """
 20. Escreva um programa que verifique se dois números
