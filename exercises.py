@@ -3,7 +3,6 @@ import ast  # import ast lib to exercise 16
 import operator  # import operator lib to exercise 16
 
 
-
 # # #### Inteiros (`int`)
 
 # """
@@ -227,11 +226,12 @@ import operator  # import operator lib to exercise 16
 16. Escreva um programa que avalie duas expressões booleanas
 inseridas pelo usuário e retorne o
 resultado da operação AND entre elas.
-
 """
+
 """It's possible to use eval() to evaluate boolean expressions,
-but be careful with the input, as it can lead to security 
-issues if not properly sanitized."""
+but be careful with the input, as it can lead to security
+issues if not properly sanitized.
+"""
 
 # boolean_1 = input("Type a boolean: ")
 # boolean_2 = input("Type other boolean: ")
