@@ -397,26 +397,26 @@ import operator  # import operator lib to exercise 16
 #     print(f"An error occurred: {e}.")
 #     print("Please, type an correct number in Celsius degress")
 
-"""
-22. Crie um programa que verifica se uma palavra
-ou frase é um palíndromo
-(lê-se igualmente de trás para frente, desconsiderando espaços e pontuações).
-Utilize try-except para garantir que a entrada seja uma string.
-Dica: Utilize a função isinstance() para verificar o tipo da entrada.
-"""
+# """
+# 22. Crie um programa que verifica se uma palavra
+# ou frase é um palíndromo
+# (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações).
+# Utilize try-except para garantir que a entrada seja uma string.
+# Dica: Utilize a função isinstance() para verificar o tipo da entrada.
+# """
 
-try:
-    is_palindrome = input("Type a word or phrase: ")
-    if isinstance(is_palindrome, str):
-        is_palindrome_formated = is_palindrome.replace(" ", "").lower()
-        if is_palindrome_formated == is_palindrome_formated[::-1]:
-            print(f"the word or phrase {is_palindrome}, is a palindrome.")
-        else:
-            print(f"The word or phrase {is_palindrome}, is not a palindrome.")
+# try:
+#     is_palindrome = input("Type a word or phrase: ")
+#     if isinstance(is_palindrome, str):
+#         is_palindrome_formated = is_palindrome.replace(" ", "").lower()
+#         if is_palindrome_formated == is_palindrome_formated[::-1]:
+#             print(f"the word or phrase {is_palindrome}, is a palindrome.")
+#         else:
+#             print(f"The word or phrase {is_palindrome}, is not a palindrome.")
 
-except ValueError as e:
-    print(f"An error occurred: {e}")
-    print("Please, type a correct word or phrase.")
+# except ValueError as e:
+#     print(f"An error occurred: {e}")
+#     print("Please, type a correct word or phrase.")
 
 
 """
@@ -427,6 +427,29 @@ não numéricas. Utilize if-elif-else para realizar a
 operação matemática baseada no operador fornecido.
 Imprima o resultado ou uma mensagem de erro apropriada.
 """
+
+try:
+    number_1 = float(input("Type the first number: "))
+    number_2 = float(input("Type the second number: "))
+    mathematical_operator = input("Type the operator (+, -, *, /): ")
+    result = None
+
+    if mathematical_operator == "+":
+        result = number_1 + number_2
+    elif mathematical_operator == "-":
+        result = number_1 - number_2
+    elif mathematical_operator == "*":
+        result = number_1 * number_2
+    elif mathematical_operator == "/" and number_2 != 0:
+        result = number_1 / number_2
+    else:
+        print("Invalid operator or division by zero.")
+    if result is not None:
+        print(f"The result of {number_1} "
+              f"{mathematical_operator} {number_2} is {result}")
+except ValueError as e:
+    print(f"Occurred an error: {e}")
+    print("Please, type an correct number.")
 
 """
 24. Escreva um programa que solicite ao usuário
