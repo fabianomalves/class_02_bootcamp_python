@@ -324,23 +324,29 @@ import operator  # import operator lib to exercise 16
 #     print(f"An erro occured: {e}")
 
 
-"""
-17. Crie um programa que receba dois valores booleanos do usuário e retorne o
-resultado da operação OR.
-"""
+# """
+# 17. Crie um programa que receba dois valores booleanos do usuário e retorne o
+# resultado da operação OR.
+# """
 
-boolean_1 = False
-boolean_2 = True
+# boolean_1 = False
+# boolean_2 = True
 
-result_boolean = boolean_1 or boolean_2
+# result_boolean = boolean_1 or boolean_2
 
-print(f"The result between {boolean_1} OR {boolean_2} is {result_boolean}.")
+# print(f"The result between {boolean_1} OR {boolean_2} is {result_boolean}.")
 
 
 """
 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano
 e, em seguida, inverta esse valor.
 """
+
+boolean_value = True
+
+boolean_inverted = not boolean_value
+
+print(f"The boolean value {boolean_value} inverted is {boolean_inverted}.")
 
 """
 19. Faça um programa que compare se dois números fornecidos
