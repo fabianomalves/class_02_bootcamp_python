@@ -348,22 +348,30 @@ import operator  # import operator lib to exercise 16
 
 # print(f"The boolean value {boolean_value} inverted is {boolean_inverted}.")
 
-"""
-19. Faça um programa que compare se dois números fornecidos
-pelo usuário são iguais.
-"""
+# """
+# 19. Faça um programa que compare se dois números fornecidos
+# pelo usuário são iguais.
+# """
 
-number_1 = 2
-number_2 = 5
+# number_1 = 2
+# number_2 = 5
 
-equal_values = number_1 == number_2
+# equal_values = number_1 == number_2
 
-print(f"The numbers {number_1} and {number_2} are equals: {equal_values}.")
+# print(f"The numbers {number_1} and {number_2} are equals: {equal_values}.")
 
 """
 20. Escreva um programa que verifique se dois números
  fornecidos pelo usuário são diferentes.
 """
+
+number_1 = 5
+number_2 = 2
+
+different_values = number_1 != number_2
+
+print(f"The numbers {number_1} and {number_2} "
+      f"are different: {different_values}.")
 
 # #### try-except e if
 
