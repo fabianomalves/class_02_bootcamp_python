@@ -1,4 +1,7 @@
 import math  # importe math lib to exercise 10
+import ast  # import ast lib to exercise 16
+import operator  # import operator lib to exercise 16
+
 
 
 # # #### Inteiros (`int`)
@@ -138,6 +141,7 @@ import math  # importe math lib to exercise 10
 # Square the radius (r²): Multiply the radius by itself (r * r).
 # Multiply by π (pi): Multiply the squared radius (r²) by the
 # mathematical constant π (approximately 3.14159).
+# import math  # importe math lib to exercise 10
 # """
 
 # PI_CONSTANT = math.pi
@@ -205,25 +209,106 @@ import math  # importe math lib to exercise 10
 #       f"the month is {month} and the year is {year}.")
 
 
-"""
-15. Escreva um programa que concatene
-duas strings fornecidas pelo usuário.
-"""
+# """
+# 15. Escreva um programa que concatene
+# duas strings fornecidas pelo usuário.
+# """
 
-string_1 = str(input("type a string: "))
-string_2 = str(input("Type other string: "))
+# string_1 = str(input("type a string: "))
+# string_2 = str(input("Type other string: "))
 
-concatenated_string = string_1 + string_2
+# concatenated_string = string_1 + string_2
 
-print(f"The string concatenated is {concatenated_string}.")
+# print(f"The string concatenated is {concatenated_string}.")
 
-# #### Booleanos (`bool`)
+# # #### Booleanos (`bool`)
 
 """
 16. Escreva um programa que avalie duas expressões booleanas
 inseridas pelo usuário e retorne o
 resultado da operação AND entre elas.
+
 """
+"""It's possible to use eval() to evaluate boolean expressions,
+but be careful with the input, as it can lead to security 
+issues if not properly sanitized."""
+
+# boolean_1 = input("Type a boolean: ")
+# boolean_2 = input("Type other boolean: ")
+
+# try:
+#     result_1 = eval(boolean_1)
+#     result_2 = eval(boolean_2)
+
+#     final_result = result_1 and result_2
+#     print(f"The final result between {result_1} "
+#           f"and {result_2} is {final_result}")
+# except Exception as e:
+#     print(f"And error occurred: {e}")
+
+"""
+Or try this safe_eval(expr) function, to evaluate boolean
+expressions with secure input:
+"""
+
+
+def safe_eval(expr):
+    ops = {
+        ast.Eq: operator.eq,
+        ast.NotEq: operator.ne,
+        ast.Gt: operator.gt,
+        ast.Lt: operator.lt,
+        ast.GtE: operator.ge,
+        ast.LtE: operator.le,
+    }
+
+    node = ast.parse(expr, mode="eval")
+
+    def _eval(node):
+        if isinstance(node, ast.Expression):
+            return _eval(node.body)
+        if isinstance(node, ast.Compare):
+            left = _eval(node.left)
+            right = _eval(node.comparators[0])
+            op = type(node.ops[0])
+            if op in ops:
+                return ops[op](left, right)
+            else:
+                raise ValueError("Operator not allowed")
+        if isinstance(node, ast.Constant):
+            return node.value
+        raise ValueError("Expression not allowed")
+
+    return _eval(node)
+
+
+expression_1 = (
+    input("Type one boolean expression, (like 5 > 3 or true):")
+    .strip()
+    .lower()
+    .replace("true", "True")
+    .replace("false", "False")
+)
+expression_2 = (
+    input("Type other boolean expression, (like 5 == 5 or false):")
+    .strip()
+    .lower()
+    .replace("true", "True")
+    .replace("false", "False")
+)
+
+try:
+    result_1 = safe_eval(expression_1)
+    result_2 = safe_eval(expression_2)
+    final_result = result_1 and result_2
+
+    print(
+        f"The bolean result between {result_1} "
+        f"AND {result_2} is {final_result}")
+
+except Exception as e:
+    print(f"An erro occured: {e}")
+
 
 """
 17. Crie um programa que receba dois valores booleanos do usuário e retorne o
@@ -252,7 +337,7 @@ pelo usuário são iguais.
 """
 
 """
-22: Verificador de Palíndromou
+22: Verificador de Palíndromo
 """
 
 """
