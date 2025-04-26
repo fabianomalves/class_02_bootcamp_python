@@ -382,7 +382,20 @@ ao usuário a temperatura em Celsius e, utilizando try-except,
 garantir que a entrada seja numérica, tratando qualquer ValueError.
 Imprima o resultado em Fahrenheit ou uma
 mensagem de erro se a entrada não for válida.
+Fórmula	
+(0 °C × 9/5) + 32 = 32 °F
 """
+
+try:
+    celsius = float(input("Type the temperature in Celsies degress: "))
+    fahrenheit = (celsius * 9/5) + 32
+
+    print(f"The temperature {celsius} degress Celsius "
+          f"is equivalent to {fahrenheit} defress Fahrenhigt.")
+
+except ValueError as e:
+    print(f"An error occurred: {e}.")
+    print("Please, type an correct number in Celsius degress")
 
 """
 22. Crie um programa que verifica se uma palavra
