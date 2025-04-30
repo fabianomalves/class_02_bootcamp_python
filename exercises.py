@@ -419,37 +419,37 @@ import operator  # import operator lib to exercise 16
 #     print("Please, type a correct word or phrase.")
 
 
-"""
-23. Desenvolva uma calculadora simples que aceite
-duas entradas numéricas e um operador (+, -, *, /) do usuário.
-Use try-except para lidar com divisões por zero e entradas
-não numéricas. Utilize if-elif-else para realizar a
-operação matemática baseada no operador fornecido.
-Imprima o resultado ou uma mensagem de erro apropriada.
-"""
+# """
+# 23. Desenvolva uma calculadora simples que aceite
+# duas entradas numéricas e um operador (+, -, *, /) do usuário.
+# Use try-except para lidar com divisões por zero e entradas
+# não numéricas. Utilize if-elif-else para realizar a
+# operação matemática baseada no operador fornecido.
+# Imprima o resultado ou uma mensagem de erro apropriada.
+# """
 
-try:
-    number_1 = float(input("Type the first number: "))
-    number_2 = float(input("Type the second number: "))
-    mathematical_operator = input("Type the operator (+, -, *, /): ")
-    result = None
+# try:
+#     number_1 = float(input("Type the first number: "))
+#     number_2 = float(input("Type the second number: "))
+#     mathematical_operator = input("Type the operator (+, -, *, /): ")
+#     result = None
 
-    if mathematical_operator == "+":
-        result = number_1 + number_2
-    elif mathematical_operator == "-":
-        result = number_1 - number_2
-    elif mathematical_operator == "*":
-        result = number_1 * number_2
-    elif mathematical_operator == "/" and number_2 != 0:
-        result = number_1 / number_2
-    else:
-        print("Invalid operator or division by zero.")
-    if result is not None:
-        print(f"The result of {number_1} "
-              f"{mathematical_operator} {number_2} is {result}")
-except ValueError as e:
-    print(f"Occurred an error: {e}")
-    print("Please, type an correct number.")
+#     if mathematical_operator == "+":
+#         result = number_1 + number_2
+#     elif mathematical_operator == "-":
+#         result = number_1 - number_2
+#     elif mathematical_operator == "*":
+#         result = number_1 * number_2
+#     elif mathematical_operator == "/" and number_2 != 0:
+#         result = number_1 / number_2
+#     else:
+#         print("Invalid operator or division by zero.")
+#     if result is not None:
+#         print(f"The result of {number_1} "
+#               f"{mathematical_operator} {number_2} is {result}")
+# except ValueError as e:
+#     print(f"Occurred an error: {e}")
+#     print("Please, type an correct number.")
 
 """
 24. Escreva um programa que solicite ao usuário
@@ -459,6 +459,33 @@ e utilize if-elif-else para classificar o número
 como "positivo", "negativo" ou "zero".
 Adicionalmente, identifique se o número é "par" ou "ímpar".
 """
+
+"""
+Enter a string input, that will be converted as integer,
+and checked if it's a number. After that,
+the number will be classified as positive,
+negative or zero. And even or odd.
+Ther is a try-except to handle the conversion
+"""
+
+numeric_number = input("Type a numeric integer number: ")
+
+
+try:
+    numeric_number = int(numeric_number)
+    if numeric_number == 0:
+        print(f"The number {numeric_number} is zero.")
+    elif numeric_number > 0:
+        print(f"The number {numeric_number} is positive.")
+    elif numeric_number < 0:
+        print(f"The number {numeric_number} is negative.")
+    if numeric_number % 2 == 0:
+        print(f"The number {numeric_number} is even.")
+    else:
+        print(f"The number {numeric_number} is odd.")
+except ValueError as e:
+    print(f"An error occurred: {e}")
+    print("Please, type a correct integer number.")
 
 """
 25. Crie um script que solicite ao usuário uma lista de
