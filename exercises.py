@@ -451,41 +451,41 @@ import operator  # import operator lib to exercise 16
 #     print(f"Occurred an error: {e}")
 #     print("Please, type an correct number.")
 
-"""
-24. Escreva um programa que solicite ao usuário
-para digitar um número. Utilize try-except
-para assegurar que a entrada seja numérica
-e utilize if-elif-else para classificar o número
-como "positivo", "negativo" ou "zero".
-Adicionalmente, identifique se o número é "par" ou "ímpar".
-"""
+# """
+# 24. Escreva um programa que solicite ao usuário
+# para digitar um número. Utilize try-except
+# para assegurar que a entrada seja numérica
+# e utilize if-elif-else para classificar o número
+# como "positivo", "negativo" ou "zero".
+# Adicionalmente, identifique se o número é "par" ou "ímpar".
+# """
 
-"""
-Enter a string input, that will be converted as integer,
-and checked if it's a number. After that,
-the number will be classified as positive,
-negative or zero. And even or odd.
-Ther is a try-except to handle the conversion
-"""
+# """
+# Enter a string input, that will be converted as integer,
+# and checked if it's a number. After that,
+# the number will be classified as positive,
+# negative or zero. And even or odd.
+# Ther is a try-except to handle the conversion
+# """
 
-numeric_number = input("Type a numeric integer number: ")
+# numeric_number = input("Type a numeric integer number: ")
 
 
-try:
-    numeric_number = int(numeric_number)
-    if numeric_number == 0:
-        print(f"The number {numeric_number} is zero.")
-    elif numeric_number > 0:
-        print(f"The number {numeric_number} is positive.")
-    elif numeric_number < 0:
-        print(f"The number {numeric_number} is negative.")
-    if numeric_number % 2 == 0:
-        print(f"The number {numeric_number} is even.")
-    else:
-        print(f"The number {numeric_number} is odd.")
-except ValueError as e:
-    print(f"An error occurred: {e}")
-    print("Please, type a correct integer number.")
+# try:
+#     numeric_number = int(numeric_number)
+#     if numeric_number == 0:
+#         print(f"The number {numeric_number} is zero.")
+#     elif numeric_number > 0:
+#         print(f"The number {numeric_number} is positive.")
+#     elif numeric_number < 0:
+#         print(f"The number {numeric_number} is negative.")
+#     if numeric_number % 2 == 0:
+#         print(f"The number {numeric_number} is even.")
+#     else:
+#         print(f"The number {numeric_number} is odd.")
+# except ValueError as e:
+#     print(f"An error occurred: {e}")
+#     print("Please, type a correct integer number.")
 
 """
 25. Crie um script que solicite ao usuário uma lista de
@@ -498,3 +498,43 @@ imprima uma mensagem de erro.
 Se a conversão for bem-sucedida para todos os elementos,
 imprima a lista de inteiros.
 """
+
+"""
+This code will ask the user to type a list of numbers separated by commas.
+Then, it will convert the string input into a list of integers.
+If the conversion is successful, it will print the list of integers.
+If the conversion fails, it will print an error message.
+The script is using a try-except block to handle any ValueError that may occur
+This structure uses list comprehension to convert the string
+input into a list of integers.
+"""
+
+numbers_list = input("Type a list of numbers separated by commas: ")
+
+try:
+    numbers_list = [int(number.strip()) for number in numbers_list.split(",")]
+    if numbers_list:
+        for number in numbers_list:
+            if not isinstance(number, int):
+                raise ValueError(f"{number} is not an integer.")
+except ValueError as e:
+    print(f"An error occurred: {e}")
+    print("Please, type a correct list of numbers separated by commas.")
+print(f"The list of numbers is: {numbers_list}")
+
+"""
+This structure uses a for loop to iterate over the list of numbers
+and convert each number to an integer.
+"""
+
+
+entry_list = input("Enter a list of numbers separated by commas: ")
+numbers_str = entry_list.split(",")
+numbers_int = []
+try:
+    for number in numbers_str:
+        numbers_int.append(int(number.strip()))
+    print("The list of numbers is:", numbers_int)
+except ValueError as e:
+    print(f"An error occurred: {e}")
+    print("Please, type a correct list of numbers separated by commas.")
